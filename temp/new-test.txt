@@ -1,0 +1,1 @@
+this is a test text file which is created by nodejs fs module.
