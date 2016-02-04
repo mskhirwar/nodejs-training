@@ -11,7 +11,14 @@ readable.on("data", function(chunk){
     i++;
     data += chunk;
     console.log("%d bytes ", chunk.length);
-    console.log(data);
+    //console.log(data);
+    
+    readable.pause();
+    
+    setTimeout(function() {
+        console.log("Now data will resume...");
+        readable.resume();
+    }, 2000);
 });
 
 readable.on("end", function(){
